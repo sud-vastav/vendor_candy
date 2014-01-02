@@ -204,6 +204,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OmniSwitch
 
+# HFM Files
+PRODUCT_COPY_FILES += \
+	vendor/candy5/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
+	vendor/candy5/prebuilt/etc/hosts.og:system/etc/hosts.og
+
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=1
 else

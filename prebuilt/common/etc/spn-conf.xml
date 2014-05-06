@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <spnOverrides version="1">
     <!-- Japan -->
+    <spnOverride numeric="44010" spn_display_rule="SPN_RULE_SHOW_PLMN" spn_override_only_on="44010"/>
     <spnOverride numeric="44020" spn="SoftBank" />
     <!-- Hong Kong -->
     <spnOverride numeric="45406" spn="SmarTone" />
@@ -1061,4 +1062,5 @@
     <spnOverride numeric="732123" spn="movistar"/>
     <spnOverride numeric="738002" spn="CLNK PLS"/>
     <spnOverride numeric="750001" spn="C W FLK"/>
+
 </spnOverrides>

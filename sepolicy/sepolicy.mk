@@ -3,7 +3,7 @@
 #
 
 BOARD_SEPOLICY_DIRS += \
-    vendor/candykat/sepolicy
+    vendor/slim/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     file.te \

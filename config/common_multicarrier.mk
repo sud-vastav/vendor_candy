@@ -1,1 +1,1 @@
-PRODUCT_PACKAGE_OVERLAYS += vendor/candykat/overlay/multicarrier
+PRODUCT_PACKAGE_OVERLAYS += vendor/slim/overlay/multicarrier

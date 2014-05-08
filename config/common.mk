@@ -27,7 +27,7 @@ PRODUCT_COPY_FILES += \
 
 # CandyKat-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/candykat/prebuilt/common/etc/init.local.rc:root/init.candykat.rc
+    vendor/candykat/prebuilt/common/etc/init.local.rc:root/init.slim.rc
 
 # Copy latinime for gesture typing
 PRODUCT_COPY_FILES += \

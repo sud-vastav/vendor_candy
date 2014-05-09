@@ -170,10 +170,10 @@ OUTFILE=$OUT/$MODVERSION.zip
 echo MODVERSION: $MODVERSION
 
 # Pack it up and sign
-printf "Zipping package..."
+printf "Zipping Candy..."
 ( cd $REPACK/ota; zip $QUIET -r $REPACK/update.zip . )
 echo
-printf "Signing package..."
+printf "Signing Candy..."
 SECURITYDIR=$ANDROID_BUILD_TOP/build/target/product/security
 java -Xmx1024m \
 	-jar $OUT/../../../host/$OUT_TARGET_HOST/framework/signapk.jar \
@@ -189,9 +189,21 @@ echo
 img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
-echo
-echo "Package complete: $OUTFILE"
-cat $img.md5sum
+echo "********************************************"
+echo "*==========================================*"
+echo "* / __)__ _ _ __  __||_    _|| //_ _ _____ *"
+echo "*/ /  /  ' | '_ \/ _ |\   //||//  _'|_  __|*"
+echo "*\ \__\ (| | | | \ \|| \_// ||\  (_|| ||   *"
+echo "* \___)\_,_|_| |_|\__|  \/  || \__,_| ||   *"
+echo "*                       /                  *"
+echo "*==========================================*"
+echo "********************************************"
+echo "* Candy Complete ***************************"
+echo "* Enjoi ************************************"
+echo "********************************************"
+echo "*==========================================*"
+echo "********************************************"
+echo $CL_CYN"md5:"$CL_MAG" $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
 echo
 )
 

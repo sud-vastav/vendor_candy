@@ -65,6 +65,8 @@ PRODUCT_PACKAGES += \
     Development \
     SpareParts \
     Superuser \
+    ScreenRecorder \
+    libscreenrecorder \
     su
 
 # Optional packages

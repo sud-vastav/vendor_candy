@@ -51,10 +51,6 @@ PRODUCT_COPY_FILES += \
     vendor/candykat/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/candykat/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# Workaround for NovaLauncher zipalign fails
-PRODUCT_COPY_FILES += \
-    vendor/candykat/prebuilt/common/app/NovaLauncher.apk:system/app/NovaLauncher.apk
-
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
 
@@ -67,6 +63,7 @@ PRODUCT_PACKAGES += \
     Superuser \
     ScreenRecorder \
     libscreenrecorder \
+	Launcher3 \
     su
 
 # Optional packages

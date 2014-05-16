@@ -63,7 +63,7 @@ PRODUCT_PACKAGES += \
     Superuser \
     ScreenRecorder \
     libscreenrecorder \
-    Launcher3 \
+	Launcher3 \
     su
 
 # Optional packages
@@ -134,7 +134,7 @@ endif
 # Versioning System
 # CandyKat freeze code
 PRODUCT_VERSION_MAJOR = 4.4.2
-PRODUCT_VERSION_MINOR = release
+PRODUCT_VERSION_MINOR = build
 PRODUCT_VERSION_MAINTENANCE = v1.4.0
 ifdef CANDYKAT_BUILD_EXTRA
     CANDYKAT_POSTFIX := -$(CANDYKAT_BUILD_EXTRA)

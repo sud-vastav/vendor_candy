@@ -64,6 +64,7 @@ PRODUCT_PACKAGES += \
     ScreenRecorder \
     libscreenrecorder \
     Launcher3 \
+    CandyWrappers \
     su
 
 # Optional packages

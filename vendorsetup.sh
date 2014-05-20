@@ -1,4 +1,5 @@
 add_lunch_combo candykat_amami-userdebug
+add_lunch_combo candykat_d2lte-userdebug
 add_lunch_combo candykat_flo-userdebug
 add_lunch_combo candykat_grouper-userdebug
 add_lunch_combo candykat_hammerhead-userdebug

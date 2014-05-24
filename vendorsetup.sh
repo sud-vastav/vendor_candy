@@ -1,8 +1,10 @@
 add_lunch_combo candykat_amami-userdebug
 add_lunch_combo candykat_d2lte-userdebug
+add_lunch_combo candykat_evita-userdebug
 add_lunch_combo candykat_flo-userdebug
 add_lunch_combo candykat_grouper-userdebug
 add_lunch_combo candykat_hammerhead-userdebug
+add_lunch_combo candykat_jflte-userdebug
 add_lunch_combo candykat_m7-userdebug
 add_lunch_combo candykat_m7spr-userdebug
 add_lunch_combo candykat_m7vzw-userdebug

@@ -170,5 +170,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     candykat.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
     ro.candykat.version=$(CANDYKAT_VERSION) \
-    ro.modversion=$(CANDYKAT_MOD_VERSION)
+    ro.modversion=$(CANDYKAT_MOD_VERSION) \
+    ro.candykat.buildtype=$(CANDYKAT_BUILD_TYPE)
 

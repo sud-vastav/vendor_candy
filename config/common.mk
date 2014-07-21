@@ -228,6 +228,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 endif
 
+# Chromium prebuilt
+ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
+-include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
+endif
+
+# CM Hardware Abstraction Framework
+PRODUCT_PACKAGES += \
+    org.cyanogenmod.hardware \
+    org.cyanogenmod.hardware.xml
+
 PRODUCT_PACKAGE_OVERLAYS += vendor/candy5/overlay/common
 
 PRODUCT_VERSION_MAJOR = release

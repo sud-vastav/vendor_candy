@@ -172,4 +172,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.candykat.version=$(CANDYKAT_VERSION) \
     ro.modversion=$(CANDYKAT_MOD_VERSION) \
     ro.candykat.buildtype=$(CANDYKAT_BUILD_TYPE)
+ 
+# OTA
+PRODUCT_PROPERTY_OVERRIDES += \
+    otaupdater.otatime=$(shell date +%Y%m%d)-0001 \
+    otaupdater.otaver=3.0-$(shell date +%Y%m%d)
 

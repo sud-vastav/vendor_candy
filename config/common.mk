@@ -59,7 +59,7 @@ PRODUCT_COPY_FILES += \
     vendor/candykat/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # T-Mobile theme engine
-include vendor/deviant/config/themes_common.mk
+include vendor/candykat/config/themes_common.mk
 
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true

@@ -72,6 +72,7 @@ PRODUCT_PACKAGES += \
     libscreenrecorder \
     Launcher3 \
     CandyWrappers \
+    CandyCenter \
     su
 
 # Optional packages

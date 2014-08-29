@@ -58,6 +58,9 @@ PRODUCT_COPY_FILES += \
     vendor/candykat/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/candykat/prebuilt/common/bin/sysinit:system/bin/sysinit
 
+# Theme engine
+include vendor/candykat/config/themes_common.mk
+
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
 
@@ -82,7 +85,9 @@ PRODUCT_PACKAGES += \
     NoiseField \
     Galaxy4 \
     LiveWallpapersPicker \
-    PhaseBeam
+    PhaseBeam \
+    ThemeChooser \
+    ThemesProvider
 
 # DSPManager
 PRODUCT_PACKAGES += \

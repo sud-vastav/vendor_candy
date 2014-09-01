@@ -87,7 +87,9 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     PhaseBeam \
     ThemeChooser \
-    ThemesProvider
+    ThemesProvider \
+    libaudioamp \
+    qcom.fm_radio
 
 # DSPManager
 PRODUCT_PACKAGES += \
@@ -158,7 +160,7 @@ endif
 # CandyKat versioning system
 PRODUCT_VERSION_MAJOR = 4.4.4
 PRODUCT_VERSION_MINOR = release
-PRODUCT_VERSION_MAINTENANCE = v1.6.0
+PRODUCT_VERSION_MAINTENANCE = v1.5.9
 ifdef CANDYKAT_BUILD_EXTRA
     CANDYKAT_POSTFIX := -$(CANDYKAT_BUILD_EXTRA)
 endif

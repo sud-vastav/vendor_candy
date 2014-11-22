@@ -216,8 +216,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/candy5/overlay/common
 
-PRODUCT_VERSION_MAJOR = 2
-PRODUCT_VERSION_MINOR = beta
+PRODUCT_VERSION_MAJOR = beta
+PRODUCT_VERSION_MINOR = v2.0.0
 PRODUCT_VERSION_MAINTENANCE = v2.0.0
 
 # Set CM_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
@@ -258,13 +258,13 @@ ifdef candy5_BUILDTYPE
     endif
 else
     # If CM_BUILDTYPE is not defined, set to UNOFFICIAL
-    candy5_BUILDTYPE := UNOFFICIAL
+    candy5_BUILDTYPE := OFFICIAL
     candy5_EXTRAVERSION :=
 endif
 
-ifeq ($(candy5_BUILDTYPE), UNOFFICIAL)
-    ifneq ($(TARGET_UNOFFICIAL_BUILD_ID),)
-        candy5_EXTRAVERSION := -$(TARGET_UNOFFICIAL_BUILD_ID)
+ifeq ($(candy5_BUILDTYPE), OFFICIAL)
+    ifneq ($(TARGET_OFFICIAL_BUILD_ID),)
+        candy5_EXTRAVERSION := -$(TARGET_OFFICIAL_BUILD_ID)
     endif
 endif
 
@@ -292,13 +292,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.modversion=$(candy5_VERSION) \
   ro.cmlegal.url=https://cyngn.com/legal/privacy-policy
 
--include vendor/cm-priv/keys/keys.mk
+-include vendor/candy5-priv/keys/keys.mk
 
 candy5_DISPLAY_VERSION := $(candy5_VERSION)
 
 ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),)
 ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
-  ifneq ($(candy5_BUILDTYPE), UNOFFICIAL)
+  ifneq ($(candy5_BUILDTYPE), OFFICIAL)
     ifndef TARGET_VENDOR_RELEASE_BUILD_ID
       ifneq ($(candy5_EXTRAVERSION),)
         # Remove leading dash from CM_EXTRAVERSION

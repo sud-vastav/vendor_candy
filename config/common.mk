@@ -148,8 +148,7 @@ PRODUCT_PACKAGES += \
     libcyanogen-dsp \
     audio_effects.conf \
     Apollo \
-    LockClock \
-    CMHome
+    LockClock   
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \

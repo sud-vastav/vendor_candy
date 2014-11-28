@@ -153,9 +153,13 @@ PRODUCT_PACKAGES += \
     libcyanogen-dsp \
     audio_effects.conf \
     Apollo \
+<<<<<<< HEAD
     LockClock \
     CMHome
 >>>>>>> 805af2a... remove some cm packages and bump version
+=======
+    LockClock   
+>>>>>>> 734efef... remove more cm packages
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \

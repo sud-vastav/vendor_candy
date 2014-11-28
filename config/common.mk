@@ -138,6 +138,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Launcher3 \
     Trebuchet \
+<<<<<<< HEAD
     AudioFX \
     CMWallpapers \
     CMFileManager \
@@ -147,6 +148,14 @@ PRODUCT_PACKAGES += \
     CMAccount \
     CMHome \
     CyanogenSetupWizard
+=======
+    DSPManager \
+    libcyanogen-dsp \
+    audio_effects.conf \
+    Apollo \
+    LockClock \
+    CMHome
+>>>>>>> 805af2a... remove some cm packages and bump version
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \

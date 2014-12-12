@@ -209,11 +209,6 @@ PRODUCT_PACKAGES += \
     Superuser \
     su
 
-# Terminal Emulator
-PRODUCT_COPY_FILES +=  \
-    vendor/candy5/proprietary/Term.apk:system/app/Term/Term.apk \
-    vendor/candy5/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/app/Term/lib/arm/libjackpal-androidterm4.so
-
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=1
 else

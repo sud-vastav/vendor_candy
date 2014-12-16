@@ -96,6 +96,10 @@ PRODUCT_COPY_FILES += \
     vendor/candy5/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/candy5/prebuilt/common/bin/sysinit:system/bin/sysinit
 
+# Proprietary latinime lib needed for Keyboard swyping
+PRODUCT_COPY_FILES += \
+    vendor/candy5/prebuilt/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+
 # userinit support
 PRODUCT_COPY_FILES += \
     vendor/candy5/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit

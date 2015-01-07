@@ -64,7 +64,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=0
+    ro.build.selinux=1
 
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
@@ -286,7 +286,7 @@ else
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.candyroms.version=$(candy5_VERSION) \
+  ro.candy5.version=$(candy5_VERSION) \
   ro.candy5.releasetype=$(candy5_BUILDTYPE) \
   ro.modversion=$(candy5_VERSION) \
   ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy

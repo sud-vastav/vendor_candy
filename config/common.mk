@@ -289,7 +289,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.candy5.version=$(candy5_VERSION) \
   ro.candy5.releasetype=$(candy5_BUILDTYPE) \
   ro.modversion=$(candy5_VERSION) \
-  ro.cmlegal.url=https://www.cyanogenmod.org/docs/privacy
+  ro.cmlegal.url=https://cyngn.com/legal/privacy-policy
 
 -include vendor/candy5-priv/keys/keys.mk
 

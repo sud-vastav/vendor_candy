@@ -137,29 +137,9 @@ PRODUCT_PACKAGES += \
 # Custom CM packages
 PRODUCT_PACKAGES += \
     Launcher3 \
-    Trebuchet \
-<<<<<<< HEAD
     AudioFX \
-    CMWallpapers \
-    CMFileManager \
     Eleven \
-    LockClock \
-    CMUpdater \
-    CMAccount \
-    CMHome \
-    CyanogenSetupWizard
-=======
-    DSPManager \
-    libcyanogen-dsp \
-    audio_effects.conf \
-    Apollo \
-<<<<<<< HEAD
-    LockClock \
-    CMHome
->>>>>>> 805af2a... remove some cm packages and bump version
-=======
-    LockClock   
->>>>>>> 734efef... remove more cm packages
+    LockClock 
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \

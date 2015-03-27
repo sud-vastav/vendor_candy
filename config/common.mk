@@ -131,15 +131,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     VoicePlus \
     Basic \
-    libemoji \
-    Terminal
+    libemoji
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
     Launcher3 \
+    Trebuchet \
     AudioFX \
     Eleven \
-    LockClock 
+    LockClock   
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
@@ -194,6 +194,7 @@ PRODUCT_PACKAGES += \
 
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
+
 PRODUCT_PACKAGES += \
     procmem \
     procrank \
@@ -206,6 +207,7 @@ else
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=0
 
+endif
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/candy5/overlay/common
 
@@ -319,4 +321,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 -include vendor/cyngn/product.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
-endif

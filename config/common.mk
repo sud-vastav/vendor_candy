@@ -199,6 +199,10 @@ PRODUCT_PACKAGES += \
     procmem \
     procrank \
     su
+    
+# OmniSwitch 
+PRODUCT_PACKAGES += \
+    OmniSwitch
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=1

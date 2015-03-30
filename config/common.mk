@@ -142,6 +142,7 @@ PRODUCT_PACKAGES += \
     Trebuchet \
     AudioFX \
     Eleven \
+    CandyOTA \
     LockClock   
 
 # CM Platform Library
@@ -361,9 +362,31 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.candy5.display.version=$(candy5_DISPLAY_VERSION)
 
+
 # CyanogenMod Platform SDK Version
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.build.version.plat.sdk=$(CM_PLATFORM_SDK_VERSION)
+
+# OTA Updater
+CANDY_BASE_URL    := https://basketbuild.com/dl/devs?dl=CandyRoms
+CANDY_DEVICE_URL  := $(CANDY_BASE_URL)/$(candy5_BUILD)
+CANDY_OTA_VERSION := $(shell date +%Y%m%d)
+CANDY_ROM_NAME    := CandyRoms
+
+# Lib For Webview
+PRODUCT_COPY_FILES += \
+vendor/candy5/prebuilt/lib/armeabi-v7a/libbypass.so:system/lib/libbypass.so
+
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota.candyroms=$(CANDY_ROM_NAME) \
+    ro.candyroms.version=$(CANDY_OTA_VERSION) \
+    ro.ota.manifest=$(CANDY_DEVICE_URL)/ota.xml \
+ 
+export CANDY_OTA_ROM=$(CANDY_ROM_NAME)
+export CANDY_OTA_VERNAME=$(candy5_DISPLAY_VERSION)
+export CANDY_OTA_VER=$(CANDY_OTA_VERSION)
+export CANDY_OTA_URL=$(CANDY_DEVICE_URL)/candy5-$(candy5_DISPLAY_VERSION).zip
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 

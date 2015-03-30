@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# Exports
+
+. $ANDROID_BUILD_TOP/vendor/candy5/tools/colors
+
+export otaxml=ota.xml
+export CANDY_DEVELOPER=$USER
+export device=$PRODUCT_DEVICE
+
+if [ -f $otaxml ];
+then
+  rm -f $otaxml
+fi
+
+cp vendor/candy5/ota.xml $otaxml
+
+touch $otaxml
+
+CANDY_OTA_MD5=$(cat "$OUT/candy5-$CANDY_OTA_VERNAME.zip.md5sum" | cut -d ' ' -f 1)
+CANDY_OTA_FILESIZE=$(ls -la "$OUT/candy5-$CANDY_OTA_VERNAME.zip" | cut -d ' ' -f 5)
+
+sed -i "s/CANDY_OTA_ROM/${CANDY_OTA_ROM}/g" $otaxml
+sed -i "s/CANDY_OTA_VERNAME/${CANDY_OTA_VERNAME}/g" $otaxml
+sed -i "s/CANDY_OTA_VERSION/${CANDY_OTA_VER}/g" $otaxml
+sed -i "s|CANDY_OTA_URL|${CANDY_OTA_URL}${device}|g" $otaxml
+sed -i "s/CANDY_OTA_MD5/${CANDY_OTA_MD5}/g" $otaxml
+sed -i "s/CANDY_OTA_FILESIZE/${CANDY_OTA_FILESIZE}/g" $otaxml
+sed -i "s/CANDY_DEVELOPER/${CANDY_DEVELOPER}/g" $otaxml
+sed -i "s|CANDY_DONATE|${CANDY_DONATE}|g" $otaxml
+
+cp $otaxml $OUT/
+rm $otaxml
+
+echo ${bldppl}"ota.xml generated."${txtrst}

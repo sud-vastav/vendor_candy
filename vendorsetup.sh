@@ -1,3 +1,4 @@
+add_lunch_combo candy5_bacon-userdebug
 add_lunch_combo candy5_d850-userdebug
 add_lunch_combo candy5_d851-userdebug
 add_lunch_combo candy5_d852-userdebug

@@ -81,7 +81,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/candy5/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/candy5/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/candy5/prebuilt/common/bin/50-candy5.sh:system/addon.d/50-bliss.sh \
+    vendor/candy5/prebuilt/common/bin/50-candy5.sh:system/addon.d/50-candy5.sh \
     vendor/candy5/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
     vendor/candy5/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
     vendor/candy5/prebuilt/common/etc/backup.conf:system/etc/backup.conf

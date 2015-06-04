@@ -4,6 +4,10 @@ $(call inherit-product, vendor/candy5/config/common.mk)
 # Include CM audio files
 include vendor/candy5/config/cm_audio.mk
 
+# Required CM packages
+PRODUCT_PACKAGES += \
+    LatinIME
+
 # Default notification/alarm sounds
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Argon.ogg \

@@ -255,7 +255,7 @@ ifndef candy5_BUILDTYPE
 endif
 
 # Filter out random types, so it'll reset to UNOFFICIAL
-ifeq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL,$(candy5_BUILDTYPE)),)
+ifeq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL OFFICIAL,$(candy5_BUILDTYPE)),)
     candy5_BUILDTYPE :=
 endif
 
@@ -282,13 +282,19 @@ ifdef candy5_BUILDTYPE
     endif
 else
     # If CM_BUILDTYPE is not defined, set to UNOFFICIAL
-    candy5_BUILDTYPE := OFFICIAL
+    candy5_BUILDTYPE := UNOFFICIAL
     candy5_EXTRAVERSION :=
 endif
 
 ifeq ($(candy5_BUILDTYPE), OFFICIAL)
     ifneq ($(TARGET_OFFICIAL_BUILD_ID),)
-        candy5_EXTRAVERSION := -$(TARGET_OFFICIAL_BUILD_ID)
+        candy5_EXTRAVERSION := OFFICIAL
+    endif
+endif
+
+ifeq ($(candy5_BUILDTYPE), UNOFFICIAL)
+    ifneq ($(TARGET_UNOFFICIAL_BUILD_ID),)
+        candy5_EXTRAVERSION := -$(TARGET_UNOFFICIAL_BUILD_ID)
     endif
 endif
 
@@ -322,7 +328,7 @@ candy5_DISPLAY_VERSION := $(candy5_VERSION)
 
 ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),)
 ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
-  ifneq ($(candy5_BUILDTYPE), OFFICIAL)
+  ifneq ($(candy5_BUILDTYPE), UNOFFICIAL)
     ifndef TARGET_VENDOR_RELEASE_BUILD_ID
       ifneq ($(candy5_EXTRAVERSION),)
         # Remove leading dash from CM_EXTRAVERSION

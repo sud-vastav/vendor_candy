@@ -26,6 +26,7 @@ add_lunch_combo candy5_t6-userdebug
 add_lunch_combo candy5_t6dwg-userdebug
 add_lunch_combo candy5_t6spr-userdebug
 add_lunch_combo candy5_t6vzw-userdebug
+add_lunch_combo candy5_taoshan-userdebug
 add_lunch_combo candy5_togari-userdebug
 add_lunch_combo candy5_togari_gpe-userdebug
 add_lunch_combo candy5_v410-userdebug

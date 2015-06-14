@@ -19,6 +19,7 @@ add_lunch_combo candy5_m8-userdebug
 add_lunch_combo candy5_mako-userdebug
 add_lunch_combo candy5_odin-userdebug
 add_lunch_combo candy5_quincyatt-userdebug
+add_lunch_combo candy5_sirius-userdebug
 add_lunch_combo candy5_skyrocket-userdebug
 add_lunch_combo candy5_t6-userdebug
 add_lunch_combo candy5_t6dwg-userdebug

@@ -18,7 +18,7 @@
 if [ $# -eq 1 ]; then
     TOP=$1
     DEVICE=$TARGET_DEVICE
-    TARGET_DIR=$OUT
+    TARGET_DIR=$OUT_DIR
 elif [ -n "$(gettop)" ]; then
     TOP=$(gettop)
     DEVICE=$(get_build_var TARGET_DEVICE)

@@ -245,7 +245,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/candy5/overlay/common
 
-PRODUCT_VERSION_MAJOR = release
+PRODUCT_VERSION_MAJOR = test
 PRODUCT_VERSION_MINOR = v2.5.5
 PRODUCT_VERSION_MAINTENANCE = v2.5.5
 
@@ -372,7 +372,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.build.version.plat.sdk=$(CM_PLATFORM_SDK_VERSION)
 
 # OTA Updater
-CANDY_BASE_URL    := https://basketbuild.com/dl/devs?dl=CandyRoms
+CANDY_BASE_URL    := https://basketbuild.com/dl/devs?dl=cuzz1369
 CANDY_DEVICE_URL  := $(CANDY_BASE_URL)/$(candy5_BUILD)
 CANDY_OTA_VERSION := $(shell date +%Y%m%d)
 CANDY_ROM_NAME    := CandyRoms

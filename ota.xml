@@ -38,10 +38,10 @@
 	<!--Put the changelog here... Use DaringFireball's Markdown to format it-->
 	<!--Surround special characters with the CDATA tags or your XML will NOT parse-->
 	<Changelog>
-	Changelog - PRODUCT_VERSION_MINOR
-		-Fixed SuperUser Icon switch
-		-Added geasture typing AOSP keyboard
-		-Candy Interface Cleanup/Re-organization
+	Changelog - 2.5.5                                            	                                                   \
+		-Fixed SuperUser Icon switch 					                                           \
+		-Added geasture typing AOSP keyboard 				                                           \
+		-Candy Interface Cleanup/Re-organization 			                                           \
 		-Added this sweet changelog to CandyOTA app
 	</Changelog>
 

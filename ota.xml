@@ -38,7 +38,11 @@
 	<!--Put the changelog here... Use DaringFireball's Markdown to format it-->
 	<!--Surround special characters with the CDATA tags or your XML will NOT parse-->
 	<Changelog>
-	### Changelog CANDY_OTA_VERSION
+	Changelog - PRODUCT_VERSION_MINOR
+		-Fixed SuperUser Icon switch
+		-Added geasture typing AOSP keyboard
+		-Candy Interface Cleanup/Re-organization
+		-Added this sweet changelog to CandyOTA app
 	</Changelog>
 
 	 <!--Default Candy Addons Page Dont Like it change it  ! -->

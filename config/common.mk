@@ -204,7 +204,7 @@ PRODUCT_PACKAGES += \
     libstagefright_soft_ffmpegadec \
     libstagefright_soft_ffmpegvdec \
     libFFmpegExtractor \
-    libnamparser
+    media_codecs_ffmpeg.xml
 
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
@@ -245,9 +245,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/candy5/overlay/common
 
+
 PRODUCT_VERSION_MAJOR = test
-PRODUCT_VERSION_MINOR = v2.5.5
-PRODUCT_VERSION_MAINTENANCE = v2.5.5
+PRODUCT_VERSION_MINOR = v2.6
+PRODUCT_VERSION_MAINTENANCE = v2.6
+
 
 # Set CM_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
 

@@ -11,6 +11,7 @@ add_lunch_combo candy5_flounder-userdebug
 add_lunch_combo candy5_grouper-userdebug
 add_lunch_combo candy5_hammerhead-userdebug
 add_lunch_combo candy5_honami-userdebug
+add_lunch_combo candy5_lettuce-userdebug
 add_lunch_combo candy5_ls990-userdebug
 add_lunch_combo candy5_m7-userdebug
 add_lunch_combo candy5_m7spr-userdebug
@@ -30,6 +31,7 @@ add_lunch_combo candy5_taoshan-userdebug
 add_lunch_combo candy5_titan-userdebug
 add_lunch_combo candy5_togari-userdebug
 add_lunch_combo candy5_togari_gpe-userdebug
+add_lunch_combo candy5_tomato-userdebug
 add_lunch_combo candy5_v410-userdebug
 add_lunch_combo candy5_yuga-userdebug
 add_lunch_combo candy5_z3-userdebug

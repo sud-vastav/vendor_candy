@@ -245,9 +245,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/candy5/overlay/common
 
-PRODUCT_VERSION_MAJOR = release
-PRODUCT_VERSION_MINOR = v2.5.6
-PRODUCT_VERSION_MAINTENANCE = v2.5.6
+
+PRODUCT_VERSION_MAJOR = test
+PRODUCT_VERSION_MINOR = v2.6
+PRODUCT_VERSION_MAINTENANCE = v2.6
+
 
 # Set CM_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
 
@@ -303,7 +305,7 @@ ifeq ($(candy5_BUILDTYPE), UNOFFICIAL)
     endif
 endif
 
-ifeq ($(candy5_BUILDTYPE), RELEASE)
+ifeq ($(candy5_BUILDTYPE), TEST)
     ifndef TARGET_VENDOR_RELEASE_BUILD_ID
         candy5_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(candy5_BUILD)
     else
@@ -315,9 +317,9 @@ ifeq ($(candy5_BUILDTYPE), RELEASE)
     endif
 else
     ifeq ($(PRODUCT_VERSION_MINOR),0)
-        candy5_VERSION := $(PRODUCT_VERSION_MAJOR)-$(shell date -u +%Y%m%d)-$(candy5_BUILDTYPE)$(candy5_EXTRAVERSION)-$(candy5_BUILD)
+        candy5_VERSION := $(PRODUCT_VERSION_MAJOR)-$(shell date -u +%Y%m%d%H)-$(candy5_BUILDTYPE)$(candy5_EXTRAVERSION)-$(candy5_BUILD)
     else
-        candy5_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(candy5_BUILDTYPE)$(candy5_EXTRAVERSION)-$(candy5_BUILD)
+        candy5_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d%H)-$(candy5_BUILDTYPE)$(candy5_EXTRAVERSION)-$(candy5_BUILD)
     endif
 endif
 
@@ -340,7 +342,7 @@ ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
         candy5_EXTRAVERSION := $(shell echo $(candy5_EXTRAVERSION) | sed 's/-//')
         TARGET_VENDOR_RELEASE_BUILD_ID := $(candy5_EXTRAVERSION)
       else
-        TARGET_VENDOR_RELEASE_BUILD_ID := $(shell date -u +%Y%m%d)
+        TARGET_VENDOR_RELEASE_BUILD_ID := $(shell date -u +%Y%m%d%H)
       endif
     else
       TARGET_VENDOR_RELEASE_BUILD_ID := $(TARGET_VENDOR_RELEASE_BUILD_ID)
@@ -372,9 +374,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.build.version.plat.sdk=$(CM_PLATFORM_SDK_VERSION)
 
 # OTA Updater
-CANDY_BASE_URL    := https://basketbuild.com/dl/devs?dl=CandyRoms
+CANDY_BASE_URL    := https://basketbuild.com/dl/devs?dl=cuzz1369
 CANDY_DEVICE_URL  := $(CANDY_BASE_URL)/$(candy5_BUILD)
-CANDY_OTA_VERSION := $(shell date +%Y%m%d)
+CANDY_OTA_VERSION := $(shell date +%Y%m%d%H)
 CANDY_ROM_NAME    := CandyRoms
 
 # Lib For Webview

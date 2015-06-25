@@ -377,11 +377,6 @@ CANDY_DEVICE_URL  := $(CANDY_BASE_URL)/$(candy5_BUILD)
 CANDY_OTA_VERSION := $(shell date +%Y%m%d)
 CANDY_ROM_NAME    := CandyRoms
 
-# Lib For Webview
-PRODUCT_COPY_FILES += \
-vendor/candy5/prebuilt/lib/armeabi-v7a/libbypass.so:system/lib/libbypass.so
-
-
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ota.candyroms=$(CANDY_ROM_NAME) \
     ro.candyroms.version=$(CANDY_OTA_VERSION) \
